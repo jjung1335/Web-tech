@@ -1,0 +1,36 @@
+﻿table{
+	width:500px;
+	margin-left:auto;
+	margin-right:auto;
+	font-family:arial;
+}
+tr,td{
+	border:1px solid black;
+	padding:3px;
+	vertical-aligh:top;
+}
+img{
+	width:100%
+}
+td.pic{
+	width:70%;
+	background-color: yellow;
+}
+td#last{
+	width:30%;
+	background-color: red;
+}
+td.thirtyfive{
+	width:35%;
+	background-color: lightgreen
+}
+p.scroll{
+	background-color:lime;
+	width:250px;
+	height:300px;
+	overflow:scroll;
+	padding-right:10px;
+	padding-left:10px;
+	margin-left:auto;
+	margin-right:auto;
+}
