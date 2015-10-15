@@ -1,0 +1,143 @@
+<html>
+	<head>
+		<title>
+		</title>
+		<style type="text/css">
+		body {
+			background:black url("images/beaver.jpg") repeat-x fixed bottom;
+			}
+		table {
+			font-family:arial;
+			color:black;
+			text-align:center;
+			width:1000px;
+			height:500px;
+			background-color:silver;
+			border:3px black solid;
+			margin-top:10px;
+			margin-bottom:10px;
+			margin-left:auto;
+			margin-right:auto;
+			}	
+		tr, td {
+			border:2px solid black; 
+			text-align:left; 
+			width:25%;
+			}
+		h1 {
+			font-size:3em;
+			text-align:center;
+			color:white;
+			margin-bottom:30px;
+		}
+		textarea{
+			margin-bottom:10px
+		}
+		p {
+			text-align:center;
+		}
+		img{
+			width: 50%;
+		}
+		.center{
+			text-align:center;
+		}
+		.yellow{
+			background-color:yellow;
+		}
+		.oops{
+			background-color:red;
+		}
+		#white{
+			background-color: white;
+			text-align:center;
+		}
+		</style>
+	</head>
+	
+	<body>
+		<h1>Soap Survey</h1>
+		<table>
+			<tr>
+				<td class="center">Soap Image</td>
+				<td class="center">Soap Color<br/>Preference</td>
+				<td class="center">Soap Purchase<br/>Intent</td>
+				<td class="center">Soap Features Liked</td>
+			</tr>
+			<tr>
+				<td><p><img src="images/pearssoap.jpg"></p></td>
+				<td>
+					<input type="radio"/>Green </br>
+					<input type="radio"/>Gold (shown)</br>
+					<input type="radio"/>Red
+				</td>
+				<td>
+					At $5.00/unit<br/>
+					<select name="intent">
+						<option value="5">Definitely Buy</option>
+						<option value="4">Likely Buy</option>
+						<option value="3">Undecided</option>
+						<option value="2">Unlikely Buy</option>
+						<option value="1">Not Buy</option>
+					</select>
+				</td>
+				<td>
+					<input type="checkbox" name="Q1" value="Shape">Shape<br/>
+					<input type="checkbox" name="Q1" value="Size">Size<br/>
+					<input type="checkbox" name="Q1" value="Smell">Smell<br/>
+					<input type="checkbox" name="Q1" value="Texture">Texture<br/>
+				</td>
+			</tr>
+			<tr>
+				<td><p><img src="images/mysoresandalsoap.jpg"></p></td>
+				<td>
+					<input type="radio"/>Ivory</br>
+					<input type="radio"/>Sandal Wood (shown)</br>
+					<input type="radio"/>Pink
+				</td>
+				<td>
+					At $8.00/unit<br/>
+					<select name="option">
+						<option value="5">Definitely Buy</option>
+						<option value="4">Likely Buy</option>
+						<option value="3">Undecided</option>
+						<option value="2">Unlikely Buy</option>
+						<option value="1">Not Buy</option>
+					</select>
+				</td>
+				<td>
+					<input type="checkbox" name="Q1" value="Shape">Shape<br/>
+					<input type="checkbox" name="Q1" value="Size">Size<br/>
+					<input type="checkbox" name="Q1" value="Smell">Smell<br/>
+					<input type="checkbox" name="Q1" value="Texture">Texture<br/>
+				</td>
+			</tr>		
+			<tr>
+				<td id="white" colspan="4">Tell us about yourself....</td>
+			</tr>
+			<tr>
+				<td>
+					Gender: <select name="option">
+						<option value="0">Male</option>
+						<option value="1">Female</option>
+							</select>
+				</td>
+				<td colspan="3">
+					Age: (under 25 enter 1,25-40 enter 2, else enter 3)
+					<input class="yellow" type="text" maxlength="3" size="5"/>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					Your comments are welcome:<br/>
+					<textarea class="yellow" name="comments" rows="10" cols="60"></textarea>
+				</td>
+				<td class="center" colspan="2">
+					<button type="Done" name="Done" value="Done">Done</button>
+					<button class="oops" type="Oops" name="Oops" value="Oops">Oops</button>
+				</td>
+			</tr>
+		</table>
+	</body>
+	
+</html>
