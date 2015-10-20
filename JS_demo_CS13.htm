@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>JavaScipt Demo in CS13</title>
+		<script>
+			function changeColor(){
+				//Create a function, called changeColor(), to change the first header to red and fontsize to 1em.
+					var myTitle= document.getElementById("Brendon");
+					myTitle.style.color="red";
+					myTitle.style.fontsize="1em";
+			}
+			function calculate(){
+				var x = 2015;
+				var y = x + 1;
+				var result = x * y;
+				document.getElementById("x").innerHTML = x;
+				document.getElementById("y").innerHTML = y;
+				document.getElementById("result").innerHTML = result;
+				document.getElementById("z").innerHTML = 2015 % 10;
+				
+				var lastName="lee";
+				var firstName="Brendon";
+				var name = firstName + lastName;
+				alert("Welcome" + name);
+			}
+			</script>
+	</head>
+	<body>
+		<h1 id="Brendon" onclick="changeColor()">My first heading (Click me!)</h1>
+		<p>y = <span id="y">?</span></p>
+		<p>x = <span id="x">?</span></p>
+		<p>The result is <span id="result">?</span></p>
+		<p>The last digit of 2015 is <span id ="z">?</span></p>
+		<button onclick="calculate()">Click me!</button>
+	</body>
+</html>

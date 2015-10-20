@@ -1,5 +1,5 @@
 <?PHP 
-$to = "zli@babson.edu"; 
+$to = "jjung5@babson.edu"; 
 $subject = "Results from your Survey form";
 $headers = "From: jjung5@babson.edu";
 $forward = 0;

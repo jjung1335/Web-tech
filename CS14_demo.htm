@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<title>CS14 demo</title>
+		<script>
+			function ask(){
+				/*
+				var today = prompt("What day is it today","0");
+				document.getElementById("userInput").innerHTML=today;
+				var president = prompt("Who is the current president?","")
+
+				if((today == 20) || (president == "Obama") ){
+					document.getElementById("result").innerHTML="Correct!";
+				}
+				*/
+				
+				var x = prompt("What is your gender?","")
+				if(x.toLowerCase()=="male"){
+					alert("Hello, Sir!");
+					alert("How old are you?");
+				}
+				else if(x.toLowerCase()=="female"{
+					alert("Hello, Madam");
+					alert("You look really young!");
+				}
+				else{
+					alert("Hello, robot");
+				}
+				/*var m;
+				switch(new Date().getMonth()){
+					case 0:
+        				m = "Spring";
+        				break;
+					case 1:
+        				m = "Spring";
+        				break;
+					case 2:
+        				m = "Spring";
+        				break;
+					case 3:
+        				m = "Spring";
+        				break;
+					case 4:
+        				m = "Spring";
+        				break;
+					case 5:
+        				m = "Summer";
+        				break;
+					case 6:
+        				m = "Summer";
+        				break;
+					case 7:
+        				m = "Summer";
+        				break;
+					case 8:
+						m="Fall"
+						break;
+					case 9:
+						m="Fall"
+						break;
+					case 10:
+						m="Fall"
+						break;
+					case 11:
+						m="Fall";
+						break;
+				}
+				*/
+				var month = new Date().getMonth();
+				var s;
+				if (month == 0 || month == 1 || month == 2 || month == 3 || month == 4){
+					s ="Spring";
+				}
+				else if (month == 5 || month == 6 || month == 7){
+					s = "Summer/Holiday";
+				}
+				else
+					s = "Fall"
+				document.getElementById("month").innerHTML="m";
+			}
+			</script>
+	</head>
+	<body>
+		<button onclick="ask()">Click me!</button>
+		<p>Input: <span id="userInput"></span></p>
+		<p>Result: <span id="result"></span></p>
+	</body>
+</html>

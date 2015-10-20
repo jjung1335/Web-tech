@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>CS14-InClass</title>
+	<style type="text/css">
+	    h1 {text-align:center; font-family:Lucida Handwriting; font-weight:bold;}
+	    p {text-align:center; margin-top:50px;}
+	    img {border:15px ridge yellow; width:50%;}
+	</style>
+    <script type="text/javascript">
+       function change(){
+           var choice = prompt("Please choose a leaf from the following:\nThyme\nClover\nShamrock\nMaple","")
+           var leafImage = document.getElementById("leaf");
+           if(choice =="Thyme"){
+					leafImage.src="images/thyme.jpg";
+                    leafImage.title="thyme leaf";
+            }
+            else if(choice =="Clover"){
+					leafImage.src="images/clover.jpg";
+                    leafImage.title="clover leaf";
+            }
+            else if(choice =="Shamrock"){
+					leafImage.src="images/shamrock.jpg";
+                    leafImage.title="shamrock leaf";
+            }
+            else if(choice =="Maple"){
+					leafImage.src="images/maple.jpg";
+                    leafImage.title="maple leaf";
+            }
+            else{
+                alert("Wrong Input!");
+            }
+       }
+                
+    </script>
+</head>
+<body>
+    <h1> Changing Images Using User inputs - Click on Image below to start</h1>
+    <p>
+        <img id="leaf" onclick="change()" src="" alt="Click here to see the image of your choice" title="" />
+    </p>
+</body>
+</html>
