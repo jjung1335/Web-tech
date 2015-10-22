@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+
+<html> 
+
+<head>
+	<title> Practice Question CS15-InClass2 </title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<style type="text/css">
+	#add, #sub, #mul, #div, #clr {width:50px; height:30px;}
+	    form {
+	        background-color: silver;
+            
+	    }
+	    h1 {
+	        text-align: center;
+	    }
+	
+	</style>
+    <script type="text/javascript">
+        function add(){
+			var myForm=document.getElementById("calc");
+			var x = myForm.num1.value;
+			var y = myForm.num2.value;
+			if(isNaN(x) || isNaN(y)){
+				alert("You did not enter two numbers!")
+			}
+			else{
+			x = parseFloat(x);
+			y = parseFloat(y);
+			var z = x+y;
+			myForm.result.value = z;
+			}
+		}
+		function sub(){
+			var myForm=document.getElementById("calc");
+			var x = myForm.num1.value;
+			var y = myForm.num2.value;
+			if(isNaN(x) || isNaN(y)){
+				alert("You did not enter two numbers!")
+			}
+			else{
+			var z = x-y;
+			myForm.result.value = z;
+			}
+		}
+		function mult(){
+			var myForm=document.getElementById("calc");
+			var x = myForm.num1.value;
+			var y = myForm.num2.value;
+			if(isNaN(x) || isNaN(y)){
+				alert("You did not enter two numbers!")
+			}
+			else{
+			var z = x*y;
+			myForm.result.value = z;
+			}
+		}
+		function div(){
+			var myForm=document.getElementById("calc");
+			var x = myForm.num1.value;
+			var y = myForm.num2.value;
+			if(isNaN(x) || isNaN(y)){
+				alert("You did not enter two numbers!")
+			}
+			else if(num2 = "0"){
+				alert("The denominator cannot be 0!")
+			}
+			else{
+			var z = x/y;
+			myForm.result.value = z;
+			}
+		}
+	
+    </script>
+	
+</head>
+
+<body>
+
+<h1>The making of a small calculator </h1>
+<form id="calc" action="" style="margin:30px 200px 30px 200px; padding: 40px 40px 40px 200px;">
+<p>Your Result: <input type="text" name="result" size="10" /></p>
+<p>Number 1: <input type="text" name="num1" size="5" /> 
+Number 2: <input type="text" name="num2" size="5" /></p>
+<p>
+<input onclick="add()" type="button"  value="ADD"/>
+<input onclick="sub()" type="button" value="SUB" />
+<input onclick="mult()" type="button" value="MULT"/>
+<input onclick="div()" type="button" value="DIV"/> <br /><br />
+<input type="reset" id = "clr" value="Clear" name="reset" />
+</p>
+
+</form>
+	
+</body>
+</html>
