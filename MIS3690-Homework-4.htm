@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title>Grade Homework #4</title>
+        <style type="text/css">
+        h1 {text-align:center; font-family:Arial; color:Navy;}
+        img {border:6px solid navy; margin-bottom:100px;}
+        p.cent{text-align:center;}
+        ul, p#inst{margin-right:200px; margin-left:200px; font-family:Cursive;font-size:1em;}
+        li {margin-top:10px; margin-bottom:10px;}
+        button{margin-right:20px;background-color:White; height:50px;width:140px}
+        
+        
+        
+        </style>
+        <script type="text/javascript">
+		  function change(id){
+              var shep = document.getElementById("shep");
+              var peng = document.getElementById("peng");
+              var leap = document.getElementById("leap");
+              var last = document.getElementById("last");
+              var head = document.getElementById("head");
+              if(id=="shep"){
+                  var img = document.getElementById("picture")
+                  img.src = "images/shepherd.jpg";
+                  img.title = "German Sheperd";
+                  img.style.borderColor = "yellow";
+                  shep.style.backgroundColor = "silver";
+                  peng.style.backgroundColor = "white";
+                  leap.style.backgroundColor = "white";
+                  last.style.backgroundColor = "white";
+                  head.innerHTML = "Shepherd";
+              }
+              else if(id=="peng"){
+                  var img = document.getElementById("picture")
+                  img.src = "images/penguin.jpg";
+                  img.title = "Penguin";
+                  img.style.borderColor = "red";
+                  shep.style.backgroundColor = "white";
+                  peng.style.backgroundColor = "silver";
+                  leap.style.backgroundColor = "white";
+                  last.style.backgroundColor = "white";
+                  head.innerHTML = "Penguin";
+              }
+              else if(id=="leap"){
+                  var img = document.getElementById("picture")
+                  img.src = "images/snowleopard.jpg";
+                  img.title = "Snow Leopard";
+                  img.style.borderColor = "Green";
+                  shep.style.backgroundColor = "white";
+                  peng.style.backgroundColor = "white";
+                  leap.style.backgroundColor = "silver";
+                  last.style.backgroundColor = "white";
+                  head.innerHTML = "Snow Leopard";
+              }
+              else{
+                  var img = document.getElementById("picture")
+                  img.src = "images/lynx.jpg";
+                  img.title = "Lynx";
+                  img.style.borderColor = "lime";
+                  shep.style.backgroundColor = "white";
+                  peng.style.backgroundColor = "white";
+                  leap.style.backgroundColor = "white";
+                  last.style.backgroundColor = "silver";
+                  head.innerHTML = "Lynx";
+              }
+          }
+		</script>
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+        
+
+        <h1 id="head"> The Animal Name Goes Here</h1>
+        <p class="cent">
+        <img id="picture" onclick="change()" src="" alt="Image Goes Here" title="Animal Name" />
+        </p>
+        <p class="cent">
+        <button id="shep" onclick="change(this.id)">German Shepherd</button> 
+		    <button id="peng" onclick="change(this.id)">Penguin</button>
+        <button id="leap" onclick="change(this.id)">Snow Leopard</button> 
+		    <button id="last" onclick="change(this.id)">Lynx</button>
+       </p>
+       <p id="inst">The homework is graded out of 25 points. Please create the functionality, using JavaScript, to do the following:</p>
+       <ul>
+            <li> Display the image of the animal corresponding to the button the user 
+            clicks on. The place-holder for the image is provided to you. (8 points).</li>
+            <li> Change the color of the image border based on the animal displayed. 
+            Yellow for German Shepherd, Red for Penguin, Green for Snow Leopard and,
+            Lime for Lynx. If my color choices are poor, you can pick your own colors as
+            long as it is different and unique for each animal image.(4 points)</li>
+            <li> Change the heading, "The Animal Name Goes Here" to the type of animal 
+            shown. (3 points)</li>
+            <li> Change the background color of the button that the user clicks on
+            to Silver. Only the button the user has clicked on must be Silver. All
+            others must be White.(5 points)</li>
+            <li> Please use a single function for all of the above functionality (5 points).
+            If you cannot, please use as many functions as needed (0 points)</li>
+       </ul>
+       
+    
+    </body>
+</html>
