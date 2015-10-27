@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+
+	    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+	    <title>CS16-InClass2 - Temperature Converter</title>
+        <style type="text/css">
+            form {font-family:Arial; font-weight:bold; padding:60px; width:50%; margin-right:auto; margin-left:auto;
+                  background-color: Silver;}
+            h1 {font-family:Arial; font-weight:bold; text-align:center;}
+            p#p1 {margin-bottom: 40px;}
+        </style>
+        <script type="text/javascript">
+        function convert(){
+            var myConverter = document.getElementById("form1");
+            var c = myConverter.cel.value;
+            var f = myConverter.far.value;
+            
+            if (c =="" && f ==""){
+                alert("You should enter a temperature!");
+            }
+            else if (c !=""){
+                if (isNaN (c)){
+                    alert("You should enter a number");
+                }
+                else{
+                    c = parseFloat (c);
+                    f = c*9/5 + 32;
+                    f = f.toFixed(2);
+                    myConverter.far.value=f;
+                }
+            }
+            else{
+                if(isNaN (f)){
+                    alert("You should enter a number");
+                }
+                else{
+                    f = parseFloat (f);
+                    c = (f-32)*5/9;
+                    c = c.toFixed(2);
+                    myConverter.cel.value=c;
+                }
+            }
+            return false;
+        }
+            </script>
+    </head>
+
+    <body>
+	    <!-- Your HTML goes here -->
+        <h1> Celsius Fahrenheit Converter</h1>
+        <form id="form1" action="" method="post">
+            <p id="p1">
+            Celsius: <input type="text" name="cel" size="10" /> 
+            Fahrenheit:  <input type="text" name="far" size="10" />
+            </p>
+
+            <p style="margin-left:100px">
+                <input onclick="return convert()" type="submit" name="submit" value="Convert" style="width:80px; height:40px;"/> 
+                <input type="reset" name="reset" value="Clear" style="width:80px; height:40px;"/>
+            </p>
+        </form>
+   
+    
+    </body>
+</html>
