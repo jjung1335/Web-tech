@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Image Demo
+    </title>
+    <style type="text/css">
+        </style>
+    <script>
+        function changePic() {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            var img = document.getElementById("flowers");
+            ctx.drawImage(img, 0, 0);
+            var imgData = ctx.getImageData(0, 0, c.width, c.height);
+            // invert colors
+           
+            var i;
+            for(i=0; i<imgData.data.length; i=i+4){
+                var avg = (imgData.data[i] + imgData.data[i+1] + imgData.data[i+2])/3;
+                imgData.data[i]=avg;
+                imgData.data[i+1]=avg;
+                imgData.data[i+2]=avg;
+            }
+
+            ctx.putImageData(imgData, 0, 0);
+        }
+        function changeRed() {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            var img = document.getElementById("flowers");
+            ctx.drawImage(img, 0, 0);
+            var imgData = ctx.getImageData(0, 0, c.width, c.height);
+            // Red Channel
+           
+            var i;
+            for(i=0; i < imgData.data.length; i=i+4){
+                imgData.data[i+1]=0;
+                imgData.data[i+2]=0;
+            }
+
+            ctx.putImageData(imgData, 0, 0);
+        }
+        function changeGreen() {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            var img = document.getElementById("flowers");
+            ctx.drawImage(img, 0, 0);
+            var imgData = ctx.getImageData(0, 0, c.width, c.height);
+            // Green Channel
+           
+            var i;
+            for(i=0; i < imgData.data.length; i=i+4){
+                imgData.data[i]=0;
+                imgData.data[i+2]=0;
+            }
+
+            ctx.putImageData(imgData, 0, 0);
+        }
+        function changeBlue() {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            var img = document.getElementById("flowers");
+            ctx.drawImage(img, 0, 0);
+            var imgData = ctx.getImageData(0, 0, c.width, c.height);
+            // Blue Channel
+           
+            var i;
+            for(i=0; i<imgData.data.length; i=i+4){
+                imgData.data[i]=0;
+                imgData.data[i+1]=0;
+            }
+
+            ctx.putImageData(imgData, 0, 0);
+        }
+        function invert() {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            var img = document.getElementById("flowers");
+            ctx.drawImage(img, 0, 0);
+            var imgData = ctx.getImageData(0, 0, c.width, c.height);
+            // Invert Channel
+           
+            var i;
+            for(i=0; i < imgData.data.length; i=i+4){
+                imgData.data[i]=255-imgData.data[i];
+                imgData.data[i+1]=255-imgData.data[i+1];
+                imgData.data[i+2]=255-imgData.data[i+2];
+            }
+
+            ctx.putImageData(imgData, 0, 0);
+        }
+
+    </script>
+</head>
+<body>
+            <img id="flowers" src="images/About me.jpg" width="537" height="720" alt="flowers" />
+            <canvas id="myCanvas" width="537" height="720" >
+            Your browser does not support the HTML5 canvas tag.</canvas>
+            <p>
+            <button id="button1" onclick="changePic()">Change</button>
+            <button id="button2" onclick="changeRed()">Red</button>
+            <button id="button3" onclick="changeGreen()">Green</button>
+            <button id="button4" onclick="changeBlue()">Blue</button>
+            <button id="button5" onclick="invert()">Invert</button>
+            </p>
+    
+</body>
+</html>
